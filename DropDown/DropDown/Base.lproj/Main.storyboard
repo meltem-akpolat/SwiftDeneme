@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgH-Zu-1IR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item11-->
+        <scene sceneID="TO8-wp-ZvC">
+            <objects>
+                <viewController id="3MB-tC-A9u" customClass="ViewController" customModule="DropDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fd5-ZQ-qOK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZDC-Wj-smO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15H-Tl-I7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ed-SB-0xw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78a-hR-hDH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yUH-MW-HL1">
+                                                <rect key="frame" x="0.0" y="303" width="375" height="315"/>
+                                            </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh2-2S-ytJ">
+                                                <rect key="frame" x="8" y="247" width="170" height="35"/>
+                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="47z-dc-iKE"/>
+                                                    <constraint firstAttribute="width" constant="170" id="x9w-lH-fY1"/>
+                                                </constraints>
+                                                <state key="normal" title="Varsayılan Yap">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="varsayilanYapButonu:" destination="3MB-tC-A9u" eventType="touchUpInside" id="gxF-1b-NFC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVo-Q2-Suv">
+                                                <rect key="frame" x="197" y="247" width="170" height="35"/>
+                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Sil">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="silButonu:" destination="3MB-tC-A9u" eventType="touchUpInside" id="AIy-bI-oAj"/>
+                                                </connections>
+                                            </button>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-x0-QcS">
+                                                <rect key="frame" x="0.0" y="59" width="375" height="131"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="131" id="7Ev-SD-aPo"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="3MB-tC-A9u" id="zck-x6-e8g"/>
+                                                    <outlet property="delegate" destination="3MB-tC-A9u" id="Qiw-O4-L0o"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jh2-2S-ytJ" firstAttribute="baseline" secondItem="eVo-Q2-Suv" secondAttribute="firstBaseline" id="5bR-qZ-1HD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ghf-x0-QcS" secondAttribute="trailing" id="6mT-As-78q"/>
+                                            <constraint firstItem="eVo-Q2-Suv" firstAttribute="trailing" secondItem="78a-hR-hDH" secondAttribute="trailingMargin" id="BhW-L1-XTM"/>
+                                            <constraint firstItem="eVo-Q2-Suv" firstAttribute="baseline" secondItem="jh2-2S-ytJ" secondAttribute="firstBaseline" id="H1K-cr-JmO"/>
+                                            <constraint firstItem="jh2-2S-ytJ" firstAttribute="top" secondItem="Ghf-x0-QcS" secondAttribute="bottom" constant="57" id="JHI-bc-XUk"/>
+                                            <constraint firstAttribute="bottom" secondItem="yUH-MW-HL1" secondAttribute="bottom" id="NCf-i3-fNM"/>
+                                            <constraint firstItem="jh2-2S-ytJ" firstAttribute="top" secondItem="eVo-Q2-Suv" secondAttribute="top" id="Q8c-2q-v2m"/>
+                                            <constraint firstItem="yUH-MW-HL1" firstAttribute="top" secondItem="jh2-2S-ytJ" secondAttribute="bottom" constant="21" id="SzR-1n-MBz"/>
+                                            <constraint firstItem="Ghf-x0-QcS" firstAttribute="trailing" secondItem="yUH-MW-HL1" secondAttribute="trailing" id="Vl9-qv-8mE"/>
+                                            <constraint firstItem="Ghf-x0-QcS" firstAttribute="top" secondItem="78a-hR-hDH" secondAttribute="top" constant="59" id="YeC-ks-TRm"/>
+                                            <constraint firstItem="jh2-2S-ytJ" firstAttribute="leading" secondItem="78a-hR-hDH" secondAttribute="leadingMargin" id="YnE-72-wkx"/>
+                                            <constraint firstItem="Ghf-x0-QcS" firstAttribute="leading" secondItem="yUH-MW-HL1" secondAttribute="leading" id="YuV-5A-mU8"/>
+                                            <constraint firstItem="eVo-Q2-Suv" firstAttribute="leading" secondItem="jh2-2S-ytJ" secondAttribute="trailing" constant="19" id="ndM-as-flP"/>
+                                            <constraint firstItem="Ghf-x0-QcS" firstAttribute="leading" secondItem="78a-hR-hDH" secondAttribute="leading" id="rR5-oW-44f"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="78a-hR-hDH" firstAttribute="top" secondItem="9Ed-SB-0xw" secondAttribute="top" id="6Ci-Tw-u0T"/>
+                                    <constraint firstItem="78a-hR-hDH" firstAttribute="centerY" secondItem="9Ed-SB-0xw" secondAttribute="centerY" id="91s-qJ-6sm"/>
+                                    <constraint firstItem="78a-hR-hDH" firstAttribute="leading" secondItem="9Ed-SB-0xw" secondAttribute="leading" id="Dpq-R6-wIn"/>
+                                    <constraint firstAttribute="bottom" secondItem="78a-hR-hDH" secondAttribute="bottom" id="Yq5-fK-tYO"/>
+                                    <constraint firstAttribute="trailing" secondItem="78a-hR-hDH" secondAttribute="trailing" id="gd1-RU-Qub"/>
+                                    <constraint firstItem="78a-hR-hDH" firstAttribute="centerX" secondItem="9Ed-SB-0xw" secondAttribute="centerX" id="vcw-qe-Wkf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Ed-SB-0xw" firstAttribute="top" secondItem="15H-Tl-I7f" secondAttribute="top" id="OUd-87-7uR"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ed-SB-0xw" secondAttribute="trailing" id="RRy-fX-My3"/>
+                            <constraint firstItem="9Ed-SB-0xw" firstAttribute="bottom" secondItem="ZDC-Wj-smO" secondAttribute="top" id="jDM-LF-11d"/>
+                            <constraint firstItem="9Ed-SB-0xw" firstAttribute="leading" secondItem="15H-Tl-I7f" secondAttribute="leading" id="p4Q-s0-MxE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item11" id="Ldm-7c-0E0"/>
+                    <connections>
+                        <outlet property="dropdown" destination="Ghf-x0-QcS" id="m66-nj-sdv"/>
+                        <outlet property="mapView" destination="yUH-MW-HL1" id="qEP-v3-EWh"/>
+                        <outlet property="scrollView" destination="9Ed-SB-0xw" id="cEk-XV-5y6"/>
+                        <outlet property="tabBar" destination="Ldm-7c-0E0" id="vNh-CR-PAM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVO-Ex-Oqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-243.32833583208398"/>
+        </scene>
+        <!--Item22-->
+        <scene sceneID="0aE-kR-6ii">
+            <objects>
+                <viewController id="fQf-fL-6X8" customClass="ViewControllerIkinci" customModule="DropDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5dZ-JE-b7H"/>
+                        <viewControllerLayoutGuide type="bottom" id="IzK-4H-K1F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ojs-et-jcT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şehir/Mahalle/Cadde/Sokak/Daire No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-mc-uDf">
+                                <rect key="frame" x="16" y="77" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmG-nS-1oR">
+                                <rect key="frame" x="136" y="164" width="103" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="İLERİ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ileriButonu:" destination="fQf-fL-6X8" eventType="touchUpInside" id="SKa-ox-YHY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item22" id="Zvl-JN-wrR"/>
+                    <connections>
+                        <outlet property="adresGirisi" destination="Ddv-mc-uDf" id="iPV-Tq-jNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQj-s8-9de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="425.93703148425789"/>
+        </scene>
+        <!--Harita-->
+        <scene sceneID="c9T-Dd-8WU">
+            <objects>
+                <viewController storyboardIdentifier="VCHarita" id="zod-bn-r5y" customClass="VCHarita" customModule="DropDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jon-QG-gp7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q2x-P8-hAW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bVo-vm-2u2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-3D-Tec">
+                                <rect key="frame" x="7" y="116" width="361" height="543"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zod-bn-r5y" id="8t2-Ed-NBa"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="PIS-3D-Tec" id="0Si-y8-0Oj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmQ-PN-zsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2293.5999999999999" y="432.23388305847078"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5uz-cl-AX6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AgH-Zu-1IR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wJ8-4P-uQs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3MB-tC-A9u" kind="relationship" relationship="viewControllers" id="5np-SU-Z2P"/>
+                        <segue destination="fQf-fL-6X8" kind="relationship" relationship="viewControllers" id="Gs5-Fy-P3A"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJL-4k-tlt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="123"/>
+        </scene>
+    </scenes>
+</document>
